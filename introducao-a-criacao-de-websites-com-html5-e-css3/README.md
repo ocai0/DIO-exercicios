@@ -5,3 +5,6 @@ Neste repositório você irá encontrar o resultado final da proposta de exercí
 ## Nota:
 
 Esta aplicação foi feita em 1 dia sem muito esforço na parte responsiva do projeto. Ela foi feita em uma tela **1366x768**.
+
+### **Screenshots:**
+![Preview do Projeto](./READ_preview.png "Screenshot 1")
