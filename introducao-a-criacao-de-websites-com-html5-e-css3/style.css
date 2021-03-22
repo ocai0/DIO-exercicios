@@ -1,0 +1,105 @@
+/*Themes Used*/
+body#light {
+    --textColor: #1b1b1b;
+    --backColor: #f1f1f1;
+    --linkColor: rgb(51, 190, 114);
+}
+body#dark {
+    --textColor: #f1f1f1;
+    --backColor: #1b1b1b;
+    --linkColor: rgb(120, 224, 181);
+}
+/*END - Themes Used*/
+a {
+    color: var(--linkColor);
+}
+body.full-image {
+    background-image: url("ranurte-EK6GH2efeMg-unsplash.jpg");
+}
+/*Basic CSS*/
+body {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    margin: 0;
+    background-color: var(--backColor);
+    background-blend-mode: overlay;
+    color: var(--textColor);
+    margin-bottom: 2em;
+}
+svg {
+    position: absolute;
+    overflow: hidden;
+}
+/*END - Basic CSS*/
+header {
+    margin: 3em auto;
+    width: 60%;
+    height: auto;
+}
+#author-mask {
+    transform: scale(6) translateX(-6%) translateY(18%);
+}
+#author {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 400px;
+    object-fit: cover;
+    display: inline-block;
+    text-align: left;
+    object-position: right;
+    clip-path: url(#author-mask);
+}
+header h1 {
+    margin: .5em auto .1em auto;
+    display: inline;
+    width: auto;
+    font-family: 'Averia Serif Libre', cursive;
+}
+header h2 {
+    width: auto;
+    font-size: 1.3em;
+    display: block;
+    margin: 0 auto 0 .5em;
+    font-family: 'Averia Serif Libre', cursive;
+}
+h2 a {
+    text-decoration: none;
+}
+article {
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.8em;
+    margin: auto;
+    width: 60%;
+}
+.img-credits {
+    position: absolute;
+    top:1em;
+    right: 1em;
+    text-align: right;
+}
+.img-credits < * {
+    margin: 0;
+}
+aside {
+    width: 60%;
+    margin: auto;
+}
+.card-holder {
+    width: 60%;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+}
+.card {
+    padding: 2em;
+    background-color: #f1f1f1;
+    color: #1b1b1b;
+    font-size: .8em;
+    margin-right: 1.5em;
+}
