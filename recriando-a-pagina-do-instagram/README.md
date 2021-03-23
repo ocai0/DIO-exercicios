@@ -5,4 +5,4 @@ Esta atividade tem como objetivo exercitar os conceitos sobre o atributo **flex*
 
 ## Imagem do projeto finalizado:
 ![pré-visualização tela inteira](pre1.png)
-![pré-visualização responsiva, celular](pre2.png =100x20)
+![pré-visualização responsiva, celular](pre2.png)
