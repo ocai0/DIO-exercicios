@@ -1,0 +1,31 @@
+.card {
+    width: calc((100% - (var(--el-padding)*2))/4);
+    height: 200px;
+    padding: 1em 2em;
+    background: #181818;
+    border-radius: 5px;
+    color: #e4e4e4;
+    contain: content;
+    font-size: 1em;
+    margin: var(--el-padding) auto;
+}
+
+.card h2 {
+    color: cyan;
+}
+
+.card p {
+    font-weight: 100;
+}
+
+#wrapper {
+    --el-padding: 1.1rem;
+    margin: 0;
+    width: calc(100% - (var(--el-padding) * 2));
+    min-height: 100vh;
+    height: auto;
+    padding: var(--el-padding);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
