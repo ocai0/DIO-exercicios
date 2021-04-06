@@ -1,0 +1,217 @@
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: currentColor;
+    font-family: 'Poppins', sans-serif;
+}
+:root, body.light {
+    --text: rgb(31, 31, 31);
+    --bg: #eee;
+    --link: rgb(53, 67, 187);
+    --linkContrast: white;
+    --headerColor: #ffffff94;
+}
+.dark {
+    --text: rgb(235, 235, 235);
+    --bg: #090e0b;
+    --link: rgb(104 169 205);
+    --linkContrast: white;
+    --headerColor: #17171794;
+}
+
+button {
+    transition: 150ms ease all;
+}
+header {
+    position: fixed;
+    --headerPadding: 20px;
+    width: calc(100% - var(--headerPadding)*2);
+    padding: var(--headerPadding);
+    display: flex;
+    align-items: center;
+    background-color: var(--headerColor);
+    box-shadow: 0 0 20px #0e0e0ef7;
+    backdrop-filter: blur(8px);
+    z-index: 99;
+    transition: 250ms ease background-color;
+}
+header > * {
+    z-index: 3;
+}
+header .container {
+    display: flex;
+}
+header .logo {
+    height: auto;
+    width: fit-content;
+    max-height: 100px;
+}
+.logo img {
+    width: 50px;
+    height: inherit;
+}
+header .actions {
+    margin: auto 0 auto auto;
+}
+header .actions button.link {
+    padding: .4rem 1.5rem;
+    border-radius: 20rem;
+    border: 2px solid var(--link);
+    background: var(--link);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--bg);
+    margin-left: 1rem;    
+}
+header .actions button.link:nth-child(2) {
+    color: var(--link);
+    background: transparent;
+}
+header .theme {
+    border: 0px solid;
+    background-color: transparent;
+    color: var(--text);
+    margin: 0 1em;
+    transition: 250ms ease all;
+}
+header .theme:hover {
+    color: var(--link);
+}
+header .theme i {
+    font-size: 1.5em;
+}
+button:hover {
+    cursor: pointer;
+}
+ol {
+    display: flex;
+    list-style-type: none;
+}
+ol li {
+    margin: 1rem;
+    color: var(--text);
+    opacity: .6;
+    font-weight: 500;
+    transition: 250ms ease all;
+}
+ol li:hover, ol li.active {
+    color: var(--link);
+    opacity: 1;
+}
+
+.preview-image {
+    
+    background-image: url("https://occ-0-4368-1123.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABc8BXFlm0sbl9UYKa1opNypvpAavBRoyHU6pSJxTtCnBhqHb31ZI4ybwIBCI9n1BcYxvNGswyntE4BCJrX693mzuPv43.jpg?r=b92");
+    background-color: #0c0c0c62;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: 50% 10%;
+    height: 100vh;
+}
+
+.highlight .container {
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 150ms ease all;
+    margin-bottom: 5rem;
+}
+
+.info {
+    --infoColor: #fee;
+    margin: auto auto 4rem 3rem;
+    max-width: 500px;
+    color: var(--infoColor);
+}
+.info > * {
+    margin-bottom: 1rem;
+}
+.info img {
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
+    max-width: 600px;
+    height: 100%;
+    max-height: 90px;
+}
+.info .actions button {
+    padding: .6rem 1rem;
+    border-radius: 20rem;
+    border: 1px solid var(--infoColor);
+    background-color: transparent;
+    color: var(--infoColor);
+    margin-right: 1rem;
+    transition: 150ms ease all;
+}
+.info .actions button:hover {
+    transform: translateY(-5px);
+}
+.info .actions button:nth-child(1) {
+    color: black;
+    border-color: var(--infoColor);
+    background-color: var(--infoColor);
+}
+.info .actions button i {
+    margin-right: .5rem;
+}
+
+.info .details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.info .details > * {
+    margin: .4rem;
+}
+
+.details #year {
+    padding: 0.2em 0.7em;
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+}
+.details #type {
+    color: red;
+    padding: .1rem .5rem; 
+    border-radius: 20rem;
+    border: 1px solid currentColor;
+}
+#info {
+    margin-bottom: 2rem;
+}
+.carousel h2 {
+    font-size: 1.4em;
+    padding: 2rem;
+    color: var(--text);
+    padding-bottom: 0.8em;
+}
+.owl-carousel.card .item {
+    transition: 300ms ease all;
+    margin: 1em;
+    background: transparent;
+    position: relative;
+    border-radius: 1em;
+    contain: content;
+}
+.owl-carousel .item:hover {
+    cursor: pointer;
+}
+.owl-carousel.card .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 13px 0px #51515157;
+}
+
+.owl-carousel.landscape .item img {
+    border-radius: .6em;
+    width: 100%;
+    object-fit: cover;
+}

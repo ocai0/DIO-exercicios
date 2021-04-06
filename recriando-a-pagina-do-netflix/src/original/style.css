@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root {
+    --red: #e50914;
+    --black: #141414;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    font-family: 'Arial', Times, serif;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .netflix-logo {
+    color: var(--red);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+header nav a {
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(#1b1b1b50, #1b1b1b50 100%), url('https://i.ytimg.com/vi/kasvV-XyzqU/maxresdefault.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.titulo {
+    margin-top:15%;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.button {
+    background-color: rgba(0,0,0,.5);
+    border:none;
+    text-transform: uppercase;
+    color:white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    transition: 300ms ease all;
+}
+.button .fas {
+    margin-right: 10px;
+}
+.descricao {
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 60%;
+}
+
+.owl-carousel {
+    margin-top: 10px;
+}
