@@ -1,0 +1,19 @@
+{
+  "name": "desenvolvimento-avancado-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aula1.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.3.2",
+    "sinon": "^10.0.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.4"
+  }
+}
