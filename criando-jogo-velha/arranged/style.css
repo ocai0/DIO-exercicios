@@ -1,3 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#canvas {
+    --base: 600px;
+    display: flex;
+    width: 100%;
+    max-width: var(--base);
+    height: 100%;
+    max-height: var(--base);
+    flex-wrap: wrap;
+
+}
+.cell {
+    --padding: 5px; /* Valor singular */
+    --margin: 10px;
+    --cellSize: calc( (var(--base) - (var(--margin) * 6) - (var(--padding) * 6))/3);
+    padding: calc(var(--padding));
+    width: var(--cellSize);
+    border-radius: 1em;
+    margin: var(--margin);
+    height: var(--cellSize);
+    transition: transform 200ms ease;
+    background-color: #e4e4e4;
+}
+.cell:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+button {
+    position: absolute;
+    width: auto;
+    top: 0;
+    left: 0;
+    width: 120px;
+    padding: 20px 40px 20px 20px;
+    font-size: 16px;
+    border: 0px solid;
+    border-radius: 0 0 10em;
+    font-weight: 600;
+    transition: all 200ms ease;
+}
+button:hover {
+    width: 150px;
+    cursor: pointer;
+    color: white;
+    background: crimson;
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3em 3em;
+    text-align: end;
+}
+.info h1 {
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+.info h4 {
+    margin: 0;
+    font-weight: 100;
+}
+a {
+    text-decoration: none!important;
+    color: crimson;
+}
