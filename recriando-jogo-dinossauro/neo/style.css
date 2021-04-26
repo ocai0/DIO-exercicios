@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+.game {
+    position: relative;
+    contain: content;
+    border-radius: .5em;
+    background-color: #e1e1e1;
+    width: 600px;
+    height: 400px;
+}
+.dino {
+    width: 60px;
+    height: 60px;
+    background-position: bottom;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
+.collider {
+    border: 1px solid red;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+}
+.collider.hidden {
+    display: none;
+}
