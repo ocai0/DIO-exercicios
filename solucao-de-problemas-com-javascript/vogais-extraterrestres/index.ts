@@ -15,10 +15,10 @@ const vogaisExtraterrestres = (dicionario: string, frase: string) => {
 
 //Sample test Cases
 console.log(vogaisExtraterrestres('aeiou', 'o rato roeu a roupa do rei de roma') === 16)
-console.log(vogaisExtraterrestres('4310', 't3st3 p4r4 c0d1f1c4r') == 8)
-console.log(vogaisExtraterrestres('kwy', 'the quick brown fox jumps over the lazy dog') == 3)
-console.log(vogaisExtraterrestres('*9', '8 * 9 = 72, é quase 9') == 2)
-console.log(vogaisExtraterrestres('ea', 'téstá a') == 3)
-console.log(vogaisExtraterrestres('$a', '$a$$') == 1)
-console.log(vogaisExtraterrestres('', '$a$$') == 0)
-console.log(vogaisExtraterrestres(undefined, '$a$$') == 0)
+console.log(vogaisExtraterrestres('4310', 't3st3 p4r4 c0d1f1c4r') === 8)
+console.log(vogaisExtraterrestres('kwy', 'the quick brown fox jumps over the lazy dog') === 3)
+console.log(vogaisExtraterrestres('*9', '8 * 9 = 72, é quase 9') === 2)
+console.log(vogaisExtraterrestres('ea', 'téstá a') === 3)
+console.log(vogaisExtraterrestres('$a', '$a$$') === 1)
+console.log(vogaisExtraterrestres('', '$a$$') === 0)
+console.log(vogaisExtraterrestres(undefined, '$a$$') === 0)
