@@ -1,19 +1,13 @@
 //Status: Passa
-const getAllInputs = () => {
-    let entries = []
-    while(entry = gets()) entries.push(entry)
-    return entries
-}
-const toInt = (bool) => bool ? 1 : 0
-const vogaisExtraterrestres = (dicionario, frase) => {
-    const arrayCaracteres = frase.replace(/\s/gi, '')
-        .split('')
-    return arrayCaracteres.reduce((acc, cur) => acc += toInt(cur.search(new RegExp(`[${dicionario}]`, 'gi')) === 0), 0)
-}
+// Obs: Ainda não sei o porque do index.ts não passar
 
-let i = 0
-const entries = getAllInputs()
-while(i < entries.length - 1) {
-    console.log(vogaisExtraterrestres(entries[i], entries[i + 1]))
-    i += 2
-}
+while(entry = gets()) {
+    let count = 0
+    const [alfabeto, frase] = [entry, gets()]
+    for(const letra of alfabeto) {
+      for(const caractereDaFrase of frase) {
+          count += (caractereDaFrase === letra) ? 1 : 0
+      }
+    }
+    console.log(count)
+  }
