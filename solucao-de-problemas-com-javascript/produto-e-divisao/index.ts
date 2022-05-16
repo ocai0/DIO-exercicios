@@ -1,18 +1,62 @@
-let test = [ '3', '2 *', '1 *', '3 *', '6' ]
-const gets = (test) => test.shift()
-
+const masterGets = (entries: string[]) => ((testEntry) => testEntry.shift())(entries)
 const produtoEDivisao = (test: string[]) => {
-    let typedInput, lastValue = 1
-    while(typedInput = gets(test)) {
-        let number = parseInt(typedInput.replace(/[^0-9]/gi, '').split('')[0])
-        let operation = typedInput.replace(/[^\*\/]/gi, '')
-        if(operation === '*') lastValue *= number
-        if(operation === '/') lastValue /= number
+    /**
+     * Essa função existe apenas para facilitar a cópia da solução para o site da DIO sem muitos problemas além da sintaxe do `TypeScript`
+     * 
+     * @returns Uma função que se comporta da mesma forma que no site.
+     */
+    const gets = () => masterGets(test)
+    // Copie o código a partir daqui
+
+    const estaForaDoNumeroAceitoDeLinhas = (quantidadeLinhas) => {
+        const MINIMO_ACEITO = 1
+        const MAXIMO_ACEITO = 100000
+        if(quantidadeLinhas < MINIMO_ACEITO) return true
+        if(quantidadeLinhas > MAXIMO_ACEITO) return true
+        return false
     }
-    return lastValue
+    const multiplicacaoSegura = (a, b) => {
+        if((a * b) > Number.MAX_SAFE_INTEGER) return BigInt(a) * BigInt(b)
+        return a * b
+    }
+    const divisaoSegura = (a, b) => {
+        if((a / b) > Number.MAX_SAFE_INTEGER) return BigInt(a) / BigInt(b)
+        return a / b
+    }
+    const quantidadeDeLinhas = parseInt(gets())
+    let oCodigoPodeRodar = true
+    while(oCodigoPodeRodar) {
+        // Como no final, este código será enviado a um site em forma imperativa, o return não funciona
+        // if(estaForaDoNumeroAceitoDeLinhas(quantidadeDeLinhas)) return
+        
+        if(estaForaDoNumeroAceitoDeLinhas(quantidadeDeLinhas)) {
+            oCodigoPodeRodar = false
+            continue
+        }
+        let valor: number | BigInt = 1
+        let proximaOperacao
+        let iteracao = 0
+        while(iteracao < quantidadeDeLinhas) {
+            proximaOperacao = gets()
+            let [numero, operador] = proximaOperacao.split(' ')
+            if(operador === undefined) {
+                oCodigoPodeRodar = false
+                continue
+            }
+            numero = parseInt(numero)
+            if(operador === '*') valor = multiplicacaoSegura(valor, numero)
+            if(operador === '/') valor = divisaoSegura(valor, numero)
+            iteracao++
+        }
+        console.log((typeof valor === 'bigint') ? valor.toString() : valor)
+        oCodigoPodeRodar = false
+    }
 }
-console.log(produtoEDivisao(test))
-test = ['3', '22 *']
-console.log(produtoEDivisao(test))
-test = ['3', '22 *', '7 /']
-console.log(produtoEDivisao(test))
+
+
+// Testes
+
+
+produtoEDivisao(['1', '22 *', '6', '23 *'])
+// produtoEDivisao(['3', '22 *', '7 /'])
+// produtoEDivisao([ '3', '2 *', '1 *', '3 *', '6' ])
