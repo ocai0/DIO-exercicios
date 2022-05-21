@@ -1,0 +1,7 @@
+const vogaisExtraterrestres = require('./vogais-extraterrestres')
+test('\'aeiou\', \'o rato roeu a roupa do rei de roma\'', () => expect(vogaisExtraterrestres('aeiou', 'o rato roeu a roupa do rei de roma')).toBe(16))
+test('\'4310\', \'t3st3 p4r4 c0d1f1c4r\'', () => expect(vogaisExtraterrestres('4310', 't3st3 p4r4 c0d1f1c4r')).toBe(8))
+test('\'kmy\', \'the quick brown fox jumps over the lazy dog\'', () => expect(vogaisExtraterrestres('kmy', 'the quick brown fox jumps over the lazy dog')).toBe(3))
+test('\'aá\', \'testaÁá\'', () => expect(vogaisExtraterrestres('aá', 'testaÁá')).toBe(2))
+test('\'&&\', \'a&a\'', () => expect(vogaisExtraterrestres('&&', 'a&a')).toBe(1))
+test('\' \', \'test it\'', () => expect(vogaisExtraterrestres(' ', 'test it')).toBe(1))

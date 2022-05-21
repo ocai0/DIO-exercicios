@@ -1,0 +1,15 @@
+{
+  "name": "solucao-de-problemas-com-javascript",
+  "version": "1.0.0",
+  "description": "Aqui você encontrará as resoluções dos exercícios propostos dessa seção do curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
