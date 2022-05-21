@@ -27,5 +27,3 @@ O programa deve imprimir uma única linha contendo o resultado que deve ser exib
 | 2 * |     | 
 | 1 * |     | 
 | 3 * |     | 
-| 6   |     | 
-
