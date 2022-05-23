@@ -1,8 +1,7 @@
-import { arrayEquals } from '../tools/arrayEquals'
 import { criarResposta } from '../tools/criarResposta'
 
-export const contagemRepetidaNumeros = (entries: Array<number>) => {
-    let numerosJaContados: Array<number> = [];
+export const contagemRepetidaNumeros = (entries) => {
+    let numerosJaContados = [];
     entries.shift();
     entries.sort((a, b) => a - b);
     const resp = criarResposta();
@@ -14,8 +13,5 @@ export const contagemRepetidaNumeros = (entries: Array<number>) => {
     });
     return resp.resposta
 }
-const def1 = arrayEquals(contagemRepetidaNumeros([12, 12, 3, 231, 123, 123]), ['4 aparece 1 vez(es)',
-'8 aparece 2 vez(es)',
-'10 aparece 3 vez(es)',
-'260 aparece 1 vez(es)'])
-console.log(def1)
+
+module.exports = contagemRepetidaNumeros
