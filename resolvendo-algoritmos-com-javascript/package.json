@@ -1,0 +1,20 @@
+{
+  "name": "dio-exercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocai0/DIO-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocai0/DIO-exercicios/issues"
+  },
+  "homepage": "https://github.com/ocai0/DIO-exercicios#readme"
+}
