@@ -13,10 +13,4 @@ const produtoEDivisao = function(test) {
     console.log(resultadoFinal)
     return resultadoFinal
 }
-export {produtoEDivisao}
-
-console.log(produtoEDivisao(['3', '2 *', '1 /', '3 *']) === 6)
-console.log(produtoEDivisao(['3', '2 *', '1 /', '33 *']) === 66)
-console.log(produtoEDivisao(['3', '2 *', '1 /', '3 *']) === 6)
-console.log(produtoEDivisao(['3', '2 *', '1 /', '3 *']) === 6)
-console.log(produtoEDivisao(['3', '2 *', '1 /', '3 *']) === 6)
+export { produtoEDivisao }

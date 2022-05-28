@@ -1,4 +1,5 @@
 const fn = require('./coracao-das-cartas')
+const fabricaDeGets = require('./../../tools/gets')
 
 test('Test 1', () => {
     const entry = [
@@ -20,11 +21,14 @@ test('Test 3', () => {
     const entry = [
         '2',
         '2 0 2',
-        '1 1 1'
+        '1 1 1',
+        '2',
+        '1 2',
+        '1 2'
     ]
     expect(fn(entry)).toBe(0)
 })
-test('Test 3', () => {
+test('Test 4', () => {
     const entry = [
         '2',
         '2 1 2 0 0 1',
