@@ -57,7 +57,6 @@ test('Deve ignorar a última fila, já que possui o número de pilhas setado em 
         '2',
         '1 1 1',
         '1 1 1',
-        '1 1 1',
 
         '3',
         '2 2 2',
