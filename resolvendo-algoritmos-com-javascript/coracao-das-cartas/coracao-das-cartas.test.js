@@ -10,7 +10,7 @@ test('Todas Passam', () => {
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(1)
+    expect(fn(fabricaDeGets(entry))).toEqual([1])
 })
 test('A Última fila não deixa passar', () => {
     const entry = [
@@ -21,7 +21,7 @@ test('A Última fila não deixa passar', () => {
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(0)
+    expect(fn(fabricaDeGets(entry))).toEqual([0])
 })
 test('1ª pilha passa, 2ª não passa', () => {
     const entry = [
@@ -35,7 +35,7 @@ test('1ª pilha passa, 2ª não passa', () => {
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(0)
+    expect(fn(fabricaDeGets(entry))).toEqual([0, 0])
 })
 test('Não deve passar', () => {
     const entry = [
@@ -50,7 +50,7 @@ test('Não deve passar', () => {
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(0)
+    expect(fn(fabricaDeGets(entry))).toEqual([0, 0])
 })
 test('Deve ignorar a última fila, já que possui o número de pilhas setado em \'0\'', () => {
     const entry = [
@@ -69,30 +69,30 @@ test('Deve ignorar a última fila, já que possui o número de pilhas setado em 
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(1)
+    expect(fn(fabricaDeGets(entry))).toEqual([1, 1])
 })
 
 test('', () => {
     entry = [
         '3',
-        '1 1 1 ',
-        '2 2 1 ',
-        '3 4 3 ',
+        '1 1 1',
+        '2 2 1',
+        '3 4 3',
 
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(1)
+    expect(fn(fabricaDeGets(entry))).toEqual([1])
 })
 test('', () => {
     entry = [
         '3',
-        '1 1 1 ',
-        '2 2 1 ',
-        '3 4 2 ',
+        '1 1 1',
+        '2 2 1',
+        '3 4 2',
 
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(0)
+    expect(fn(fabricaDeGets(entry))).toEqual([0])
 })
 test('', () => {
     entry = [
@@ -103,5 +103,5 @@ test('', () => {
 
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toBe(0)
+    expect(fn(fabricaDeGets(entry))).toEqual([0])
 })
