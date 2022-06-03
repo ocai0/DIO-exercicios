@@ -69,7 +69,7 @@ test('Deve ignorar a última fila, já que possui o número de pilhas setado em 
         
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toEqual([1, 1])
+    expect(fn(fabricaDeGets(entry))).toEqual([0, 1])
 })
 
 test('', () => {
@@ -103,5 +103,5 @@ test('', () => {
 
         '0'
     ]
-    expect(fn(fabricaDeGets(entry))).toEqual([0])
+    expect(fn(fabricaDeGets(entry))).toEqual([1])
 })

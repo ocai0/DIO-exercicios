@@ -20,6 +20,10 @@ const coracaoDasCartas = (gets) => {
             numeroDePilhas--
         }
         const [_, somaDeTodasAsCartas] = obterTopoDasPilhas(mapaDePilhas)
+        if(somaDeTodasAsCartas === 0) {
+            resultado.push(0)
+            continue
+        }
         if(somaDeTodasAsCartas % 3 !== 0) {
             resultado.push(0)
             continue
@@ -44,21 +48,14 @@ const coracaoDasCartas = (gets) => {
     }
     return resultado;
 }
-// let _tema = [
-//     '5', 
-//     '2 1 1 2 1',
-//     '1 1 1 2 1', 
-//     '1 1 1 2 1', 
-//     '2 1 1 2 1', 
-//     '1 1 1 2 1',
+let _tema = [
+    '3',
+    '1 2 1',
+    '1 1 0',
+    '1 1 1',
 
-//     '3',
-//     '1',
-//     '1',
-//     '1',
-
-//     '0',
-// ];
-// const gets = () => _tema.shift();
-// console.log(coracaoDasCartas(gets))
+    '0'
+];
+const gets = () => _tema.shift();
+console.log(coracaoDasCartas(gets))
 module.exports = coracaoDasCartas
